@@ -26,9 +26,8 @@ public class CoolWeatherDB {
 	
 	/**
 	 * 将构造方法私有化
-	 * @return 
 	 */
-	private void CoolWeather(Context context){
+	private CoolWeatherDB(Context context){
 		CoolWeatherOpenHelper dbHelper = new CoolWeatherOpenHelper(context,DB_NAME,null,VERSION);
 		db = dbHelper.getWritableDatabase();
 	}

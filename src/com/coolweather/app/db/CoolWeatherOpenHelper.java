@@ -1,7 +1,6 @@
 package com.coolweather.app.db;
 
 import android.content.Context;
-import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -11,7 +10,6 @@ public class CoolWeatherOpenHelper extends SQLiteOpenHelper {
 	public CoolWeatherOpenHelper(Context context, String name,
 			CursorFactory factory, int version) {
 		super(context, name, factory, version);
-		// TODO Auto-generated constructor stub
 	}
 
 	/**
@@ -44,9 +42,9 @@ public class CoolWeatherOpenHelper extends SQLiteOpenHelper {
 
 	@Override
 	public void onCreate(SQLiteDatabase db) {
-		db.execSQL(CREATE_PROVINCE);
-		db.execSQL(CREATE_CITY);
-		db.execSQL(CREATE_COUNTY);
+		db.execSQL(CREATE_PROVINCE);//创建Province表
+		db.execSQL(CREATE_CITY);//创建City表
+		db.execSQL(CREATE_COUNTY);//创建County表
 
 	}
 
